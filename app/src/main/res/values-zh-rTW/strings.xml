@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">猜數字</string>
+    <string name="btn_go">確定</string>
+    <string name="have_guess_number">答對了</string>
+    <string name="input_number">輸入1-10的數字</string>
+    <string name="msg_bigger">大一點</string>
+    <string name="msg_no_Number">請輸入數字!</string>
+    <string name="msg_smaller">小一點</string>
+    <string name="title_msg">訊息</string>
+    <string name="cancel">取消</string>
+    <string name="do_u_want_to_Restart">您要重新開始嗎</string>
+    <string name="msg_awesome">超強的兒~~數字是</string>
+</resources>
