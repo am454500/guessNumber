@@ -49,7 +49,6 @@ class MaterialActivity : AppCompatActivity() {
             .setMessage(message)
             .setPositiveButton(R.string.btn_go,null)
             .show()
-
         fab.setOnClickListener { view ->
             AlertDialog.Builder(this)
                 .setTitle(getString(R.string.do_u_want_to_Restart))
