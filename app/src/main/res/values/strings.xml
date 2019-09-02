@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">guessNumber</string>
-    <string name="input_number">input number between 1-10</string>
+    <string name="input_number">input 4 different number</string>
     <string name="btn_go">GO</string>
     <string name="have_guess_number">GOTCHA!!</string>
     <string name="msg_no_Number">plz input Number</string>
-    <string name="msg_bigger">Bigger</string>
-    <string name="msg_smaller">Smaller</string>
     <string name="title_msg">Message</string>
     <string name="title_activity_material">MaterialActivity</string>
     <string name="do_u_want_to_Restart">Do u want to Restart?</string>
     <string name="cancel">Cancel</string>
     <string name="msg_awesome">WOW!! U are AWESOME,number is</string>
+    <string name="msg_bingo">YES,U GUESS the number:</string>
+    <string name="msg_cant_same">4 numbers should not be same</string>
 
 </resources>

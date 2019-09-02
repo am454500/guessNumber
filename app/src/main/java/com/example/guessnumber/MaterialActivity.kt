@@ -20,28 +20,25 @@ class MaterialActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_material)
-        Log.d(tag,"secretNum="+secretNumber.secret)
+        secretNumber.creatSecretNumber()
         id_count.setText(secretNumber.count.toString())
     }
     fun check(view: View){
         var message =getString(R.string.have_guess_number)
-        var n:Int=0
-        var diff=0
         id_count.setText(secretNumber.count.toString())
         if(id_number.text.isBlank()){
             message=getString(R.string.msg_no_Number)
+        }else if(id_number.length()!=4){
+            message=getString(R.string.msg_no_Number)
         }else {
-            n=id_number.text.toString().toInt()
-            diff=secretNumber.validate(n)
-            Log.d(tag,"number: " + n)
-            if(diff<0) {
-                message=getString(R.string.msg_bigger)
-            }else if(diff>0){
-                message=getString(R.string.msg_smaller)
-            }else {
-                if (secretNumber.count < 3) {
-                    message = getString(R.string.msg_awesome) + secretNumber.secret
+            if(!secretNumber.haveSameNumber(id_number.text.toString().toCharArray())) {
+                if (secretNumber.validate(id_number.text.toString()) == "4A0B") {
+                    message += id_number.text.toString()
+                } else {
+                    message = secretNumber.validate(id_number.text.toString())
                 }
+            }else{
+                message = getString(R.string.msg_cant_same)
             }
         }
         AlertDialog.Builder(this)
