@@ -13,27 +13,25 @@ class SecretNumber {
     var numberAry= CharArray(4)
     var numberAryStr= arrayOfNulls<String>(4)
     var checkedAry= booleanArrayOf(false,false,false,false)
-    fun validate(number:String):String{
+    var msg_nAnB =""
+    fun validate(number:String){
+        msg_nAnB=""
         numberAry= number.toCharArray()
-        Log.d(tag,"add: "+numberAryStr[0])
         checkedAry=booleanArrayOf(false,false,false,false)
         rightPosAndNum(numberAry)
         rightNum(numberAry)
-//        haveSameNumber(numberAry)
-        count++
-        return Acount.toString()+"A"+Bcount.toString()+"B"
+        msg_nAnB=Acount.toString()+"A"+Bcount.toString()+"B"
     }
     fun creatSecretNumber(){
         numberList.clear()
         for(i in 0..9){
             numberList.add(i)
-//            Log.d(tag,"list:"+numberList.indexOf(i).toString())
+
         }
         for(i in 0..3){
-//            Log.d(tag,"listSize:"+numberList.size.toString())
             secretAry[i]=numberList.get(Random().nextInt(numberList.size))
             numberList.remove(secretAry[i])
-//            Log.d(tag,secretAry[i].toString())
+            Log.d(tag,secretAry[i].toString())
         }
     }
     fun rightPosAndNum(numberAry:CharArray):Int{
@@ -66,7 +64,6 @@ class SecretNumber {
         for(i in 0..3){
             for(j in 0..3){
                 if(i!=j&&numberAryStr[i].equals(numberAryStr[j])){
-                    Log.d(tag,"i: "+numberAryStr[i]+" j:"+numberAryStr[j])
                     haveSameNumber=true
                 }
             }
