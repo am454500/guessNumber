@@ -31,6 +31,7 @@ class RecordActivity : AppCompatActivity() {
             intent.putExtra("NICKNAME",nickname)
             setResult(Activity.RESULT_OK,intent)
             finish()
+            Log.d(tag,"this is branch firebase")
         }
     }
 }
